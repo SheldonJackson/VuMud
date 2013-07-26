@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Configuration;
+using System.Linq;
 
 namespace VuMud.World {
     public class Map {
@@ -7,16 +9,16 @@ namespace VuMud.World {
         public string mapString { get; set; }
         public RoomTitles[,] WorldMapRoomTitles = new RoomTitles[10, 20]
         {
-            {RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave},
-            {RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave},
-            {RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave},
-            {RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave},
-            {RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave},
-            {RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave},
-            {RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave},
-            {RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave},
-            {RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave},
-            {RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave,RoomTitles.Cave},
+            {RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Cave,   RoomTitles.Cave,   RoomTitles.Cave,   RoomTitles.Cave},
+            {RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Cave,   RoomTitles.Cave,   RoomTitles.Cave,   RoomTitles.Cave},
+            {RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Cave,   RoomTitles.Cave,   RoomTitles.Cave,   RoomTitles.Cave},
+            {RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.ForestClearing, RoomTitles.ForestClearing, RoomTitles.ForestClearing, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Cave,   RoomTitles.Cave,   RoomTitles.Cave,   RoomTitles.Cave},
+            {RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.ForestClearing, RoomTitles.ForestClearing, RoomTitles.ForestClearing, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains},
+            {RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.ForestClearing, RoomTitles.ForestClearing, RoomTitles.ForestClearing, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains},
+            {RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.Woods,  RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains},
+            {RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains},
+            {RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains},
+            {RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Plains,         RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Woods, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains, RoomTitles.Plains},
         };
 
         public Map()
@@ -32,8 +34,26 @@ namespace VuMud.World {
             {
                 for(var j = 0; j < 10; j++)
                 {
-                    string[] exits = new string[]{"North", "South", "East", "West"};
-                    rooms[i, j] = new Room(i, j, string.Format("{0}", WorldMapRoomTitles[j, i]), generateRoomDescription(WorldMapRoomTitles[j,i]), exits);
+                    string[] exits = new string[4] {"North", "South", "East", "West"};
+                    if (i == 0)
+                    {
+                        exits[3] = null;
+                    }
+                    else if (i == 19)
+                    {
+                        exits[2] = null;
+                    }
+
+                    if (j == 0)
+                    {
+                        exits[0] = null;
+                    }
+                    else if (j == 9)
+                    {
+                        exits[1] = null;
+                    }
+                    rooms[i, j] = new Room(i, j, string.Format("{0}", WorldMapRoomTitles[j, i]),
+                            generateRoomDescription(WorldMapRoomTitles[j, i]), exits);
                 }
             }
             return rooms;
@@ -58,9 +78,6 @@ namespace VuMud.World {
             {
                 description = string.Format("You are standing in the middle of a field.  The wind is blowing.  Hard.{0}", Environment.NewLine);
             }
-            else if (roomTitle == RoomTitles.Woods) {
-                description = string.Format("Trees surround you.  You can hear the wildlife of the woods all around you.{0}", Environment.NewLine);
-            }
 
             return description;
         }
@@ -68,7 +85,7 @@ namespace VuMud.World {
         public void GenerateMapDrawing()
         {
             string map;
-            map = "+--------------------+\n";
+            map = "+ - - - - - - - - - - - - - - - - - - - - +\n";
             for (int i = 0; i < 10; i++)
             {
                 map += "|";
@@ -77,25 +94,25 @@ namespace VuMud.World {
                     switch (WorldMapRoomTitles[i, j])
                     {
                         case RoomTitles.Cave:
-                            map += "c";
+                            map += " c";
                             break;
                         case RoomTitles.Dungeon:
-                            map += "d";
+                            map += " d";
                             break;
                         case RoomTitles.ForestClearing:
-                            map += "f";
+                            map += " f";
                             break;
                         case RoomTitles.Woods:
-                            map += "w";
+                            map += " w";
                             break;
                         case RoomTitles.Plains:
-                            map += "p";
+                            map += " p";
                             break;
                     }
                 }
-                map += "|\n";
+                map += " |\n";
             }
-            map += "+--------------------+";
+            map += "+ - - - - - - - - - - - - - - - - - - - - +\n";
             mapString = map;
         }
 
@@ -131,7 +148,7 @@ namespace VuMud.World {
                 }
                 map += " |\n";
             }
-            map += "+ - - - - - - - - - - - - - - - - - - - - +";
+            map += "+ - - - - - - - - - - - - - - - - - - - - +\n";
             mapString = map;
         }
 
@@ -140,7 +157,19 @@ namespace VuMud.World {
             foreach (char tile in mapString) {
                 switch (tile) {
                     case 'c':
-                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        break;
+                    case 'w':
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
+                        break;
+                    case 'f':
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        break;
+                    case 'p':
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        break;
+                    case 'd':
+                        Console.ForegroundColor = ConsoleColor.DarkMagenta;
                         break;
                     case '+':
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -162,6 +191,11 @@ namespace VuMud.World {
                 Console.ResetColor();
             }
    
+        }
+
+        public Room FetchRoom(int x, int y)
+        {
+            return WorldMapRooms[x,y];
         }
     }
 }
