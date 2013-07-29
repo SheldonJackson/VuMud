@@ -1,0 +1,28 @@
+﻿
+public void DbmUsage() {
+
+    SqlExecute dbm = new SqlExecute();
+    dbm.SetConfiguration("VUHL-9CLYBS1\\CSHARPCLASS", "VehicleInventory", "Vehicles", "Password123!");
+
+	// Parameters will need to match what is used in your stored procedure
+    var parameters = new SqlParameter[]
+    {
+            new SqlParameter("name", "DBM TESTER"),
+            new SqlParameter("type", 2),
+            new SqlParameter("color","Yellow")
+    };
+
+	// For Select Statements
+	// dbm.Select({Name of Stored Procedure}, {Parameters});
+
+    List<IDataRecord> resultSet = dbm.Select("SelectVehicles", parameters);
+    foreach (IDataRecord result in resultSet)
+    {
+        Console.WriteLine(result["Name"]);
+    }
+
+	// For Input/Update/Delete
+	// Call the appropriate method you need.
+	// Insert returns the Insert ID (long)
+	// Update/Delete returns the number of affected rows. (long)
+}

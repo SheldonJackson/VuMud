@@ -137,6 +137,7 @@
     <Content Include="bin\Debug\VuMud.exe" />
     <Content Include="bin\Debug\VuMud.pdb" />
     <Content Include="bin\Debug\VuMud.vshost.exe" />
+    <Content Include="Dbm\DbmImplementationExamples.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
