@@ -10,8 +10,8 @@ namespace VuMud.Items {
     {
         public int Bonus { get; set; }
         public Stats AffectedStat { get; set; }
-        public string Description { get; set; }
-        public string Name { get; set; }
+        public override string Description { get; set; }
+        public override string Name { get; set; }
         public ArmorSlots Slot { get; set; }
 
         public IConsumable Consumable;

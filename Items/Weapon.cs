@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VuMud.Creature;
+﻿using VuMud.Creature;
 
 namespace VuMud.Items {
     public class Weapon : Item
     {
         public int Bonus { get; set; }
         public Stats AffectedStat { get; set; }
-        public string Description { get; set; }
-        public string Name { get; set; }
+        public override string Description { get; set; }
+        public override string Name { get; set; }
         public WeaponSlots Slot { get; set; }
 
         public IConsumable Consumable;
