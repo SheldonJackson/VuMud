@@ -30,7 +30,6 @@ namespace VuMud.Controllers {
         public void HandleResponse()
         {
             Room curRoom = PlayerCreature.Location;
-            //Console.WriteLine("{0}, {1}", PlayerCreature.Location.X, PlayerCreature.Location.Y);
 
             var response = MoveMenu.GetRepsonse();
             switch (response.ToUpper())
@@ -51,10 +50,12 @@ namespace VuMud.Controllers {
                     if (curRoom.Exits.Contains("West"))
                         PlayerCreature.Move(Map.WorldMapRooms[curRoom.X - 1, curRoom.Y]);
                     break;
+                case "SHOW MAP":
+                    MoveMenu.DisplayMap(Map);
+                    break;
                 default:
                     break;
             }
-            //Console.WriteLine("{0}, {1}", PlayerCreature.Location.X, PlayerCreature.Location.Y);
         }
     }
 }
