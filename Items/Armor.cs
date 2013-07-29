@@ -8,21 +8,18 @@ using VuMud.Creature;
 namespace VuMud.Items {
     public class Armor : Item
     {
-        public int Bonus { get; set; }
-        public Stats AffectedStat { get; set; }
-        public override string Description { get; set; }
-        public override string Name { get; set; }
         public ArmorSlots Slot { get; set; }
 
         public IConsumable Consumable;
         public IEquipable Equipable;
 
-        public Armor(int bonus, Stats stat, string desc, string name)
+        public Armor(int bonus, Stats stat, string desc, string name, int weight)
         {
             Bonus = bonus;
             AffectedStat = stat;
             Description = desc;
             Name = name;
+            Weight = weight;
 
             Consumable = new NonConsumable();
             Equipable = new Equipable();

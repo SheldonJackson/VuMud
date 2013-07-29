@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VuMud.World;
 
 namespace VuMud.Menus {
     public class MoveMenu : IMenu {
@@ -30,6 +31,11 @@ namespace VuMud.Menus {
         public string GetRepsonse()
         {
             return Console.ReadLine();
+        }
+
+        public void DisplayMap(Map map)
+        {
+            map.DisplayMap();
         }
 
     }

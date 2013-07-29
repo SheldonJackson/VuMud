@@ -51,6 +51,9 @@ namespace VuMud.Controllers {
                     if (curRoom.Exits.Contains("West"))
                         PlayerCreature.Move(Map.WorldMapRooms[curRoom.X - 1, curRoom.Y]);
                     break;
+                case "SHOW MAP":
+                    MoveMenu.DisplayMap(Map);
+                    break;
                 default:
                     break;
             }
