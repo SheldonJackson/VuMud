@@ -79,6 +79,8 @@
     <Compile Include="Creature\Stats.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Dbm\DbConfiguration.cs" />
+    <Compile Include="Dbm\SqlExecute.cs" />
     <Compile Include="Items\Armor.cs" />
     <Compile Include="Items\ArmorSlots.cs" />
     <Compile Include="Items\Consumable.cs" />
