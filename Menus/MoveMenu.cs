@@ -14,9 +14,17 @@ namespace VuMud.Menus {
             }
         }
 
+        public void Display(string roomDescription)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("{0}", roomDescription);
+            Console.ResetColor();
+
+            Console.WriteLine("Obvious Exits:{0}", Environment.NewLine);
+        }
+
         public void Display()
         {
-            
         }
 
         public string GetRepsonse()
