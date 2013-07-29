@@ -57,10 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Classes.cs" />
-    <Compile Include="Controllers\CharacterCreationController.cs" />
     <Compile Include="Controllers\IController.cs" />
     <Compile Include="Controllers\MoveController.cs" />
-    <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Creature\Ailments.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -91,12 +89,13 @@
     <Compile Include="Items\NonEquipable.cs" />
     <Compile Include="Items\Potion.cs" />
     <Compile Include="Items\PotionEffects.cs" />
+    <Compile Include="Items\Stats.cs" />
     <Compile Include="Items\Types.cs" />
     <Compile Include="Items\Weapon.cs" />
     <Compile Include="Items\WeaponSlots.cs" />
+    <Compile Include="Items\WorldItems.cs" />
     <Compile Include="Menus\CharacterMenu.cs" />
     <Compile Include="Menus\IMenu.cs" />
-    <Compile Include="Menus\Menu.cs" />
     <Compile Include="Menus\MenuItem.cs" />
     <Compile Include="Menus\MoveMenu.cs" />
     <Compile Include="Menus\RoomMenu.cs" />
