@@ -78,6 +78,9 @@ namespace VuMud.World {
             {
                 description = string.Format("You are standing in the middle of a field.  The wind is blowing.  Hard.{0}", Environment.NewLine);
             }
+            else if (roomTitle == RoomTitles.Woods) {
+                description = string.Format("Trees surround you.  You are shielded from the sun as the tall timbers form a canopy above your head.{0}", Environment.NewLine);
+            }
 
             return description;
         }

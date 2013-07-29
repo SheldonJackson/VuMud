@@ -20,23 +20,17 @@ namespace VuMud.Controllers {
 
         public void DisplayMenu()
         {
-            //check for exits
-            //Room room = Character.CurrentRoom;
+            Room currRoom = PlayerCreature.Location;
+            MoveMenu.Display(currRoom.Description);
             //build options
-            var menuItems = new List<MenuItem>()
-            {
-                new MenuItem("North", "N"),
-                new MenuItem("South", "S"),
-                new MenuItem("East", "E"),
-                new MenuItem("West", "W")
-            };
+            var menuItems = (from exit in currRoom.Exits where exit != null select new MenuItem(exit, exit.Substring(0,1))).ToList();
             MoveMenu.Display(menuItems);
         }
 
         public void HandleResponse()
         {
             Room curRoom = PlayerCreature.Location;
-            Console.WriteLine("{0}, {1}", PlayerCreature.Location.X, PlayerCreature.Location.Y);
+            //Console.WriteLine("{0}, {1}", PlayerCreature.Location.X, PlayerCreature.Location.Y);
 
             var response = MoveMenu.GetRepsonse();
             switch (response.ToUpper())
@@ -60,7 +54,7 @@ namespace VuMud.Controllers {
                 default:
                     break;
             }
-            Console.WriteLine("{0}, {1}", PlayerCreature.Location.X, PlayerCreature.Location.Y);
+            //Console.WriteLine("{0}, {1}", PlayerCreature.Location.X, PlayerCreature.Location.Y);
         }
     }
 }
