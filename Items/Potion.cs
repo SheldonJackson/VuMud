@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VuMud.Creature;
+﻿using VuMud.Creature;
 
 namespace VuMud.Items {
     public class Potion : Item
     {
-        public int Bonus { get; set; }
-        public Stats AffectedStat { get; set; }
-        public override string Description { get; set; }
-        public override string Name { get; set; }
-
         public IConsumable Consumable;
         public IEquipable Equipable;
 
@@ -23,6 +12,7 @@ namespace VuMud.Items {
             AffectedStat = stat;
             Description = desc;
             Name = name;
+            Weight = 1;
 
             Consumable = new Consumable();
             Equipable = new NonEquipable();
