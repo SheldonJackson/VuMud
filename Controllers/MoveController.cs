@@ -30,10 +30,7 @@ namespace VuMud.Controllers {
         public void HandleResponse()
         {
             Room curRoom = PlayerCreature.Location;
-<<<<<<< HEAD
             //Console.WriteLine("{0}, {1}", PlayerCreature.Location.X, PlayerCreature.Location.Y);
-=======
->>>>>>> origin/Menus-and-Controllers
 
             var response = MoveMenu.GetRepsonse();
             switch (response.ToUpper())
@@ -60,10 +57,7 @@ namespace VuMud.Controllers {
                 default:
                     break;
             }
-<<<<<<< HEAD
             //Console.WriteLine("{0}, {1}", PlayerCreature.Location.X, PlayerCreature.Location.Y);
-=======
->>>>>>> origin/Menus-and-Controllers
         }
     }
 }
