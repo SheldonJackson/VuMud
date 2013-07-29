@@ -9,7 +9,8 @@ using VuMud.Creature;
 namespace VuMud.Items {
     public class WorldItems
     {
-        public List<Item> Items = new List<Item>(); 
+        public List<Item> Items = new List<Item>();
+
         public WorldItems()
         {
             Items.Add(new Potion(10, Stats.Health, "Recovers 10 Health", "Minor Health Potion"));
