@@ -8,7 +8,7 @@ namespace VuMud.Creature {
         public string Name { get; set; }
         public Stats Stats { get; set; }
         public string Description { get; set; }
-        public Room Location { get; set; } // Once Trey pushes his changes up
+        public Room Location { get; set; }
 
         Enum Class { get; set; }
         List<Item> Invtentory { get; set; }
