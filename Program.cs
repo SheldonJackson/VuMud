@@ -1,21 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VuMud.Controllers;
 using VuMud.Creature;
-using VuMud.Menus;
 using VuMud.World;
 
 namespace VuMud {
     class Program {
         static void Main(string[] args) {
-            Map worldMap = new Map();
+            
             PlayerCharacter pc = new PlayerCharacter();
-            pc.Location = worldMap.WorldMapRooms[0, 0];
+            var characterCreationController = new CharacterCreationController();
+            pc = characterCreationController.CreateCharacter();
+            // TODO - This will need to be rewritten or taken out, right now it's just here to prove that character creation works
+            Console.WriteLine("Here is your character's info!");
+            Console.WriteLine(pc.Name);
+            Console.WriteLine(pc.Description);
+            Console.WriteLine();
+
+            Console.WriteLine("Get ready for an adventure!!");
+            Console.WriteLine();
+            Map worldMap = new Map();
             MoveController mc = new MoveController(pc, worldMap);
+            pc.Location = worldMap.WorldMapRooms[0, 0];
             worldMap.DisplayMap();
+
             do
             {
                 try {
