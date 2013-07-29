@@ -6,6 +6,7 @@ using VuMud.World;
 namespace VuMud {
     class Program {
         static void Main(string[] args) {
+<<<<<<< HEAD
             
             PlayerCharacter pc = new PlayerCharacter();
             var characterCreationController = new CharacterCreationController();
@@ -21,13 +22,20 @@ namespace VuMud {
             Map worldMap = new Map();
             MoveController mc = new MoveController(pc, worldMap);
             pc.Location = worldMap.WorldMapRooms[0, 0];
+=======
+            Map worldMap = new Map();
+            PlayerCharacter playerCharacter = new PlayerCharacter();
+            playerCharacter.Location = worldMap.WorldMapRooms[0, 0];
+            MoveController moveController = new MoveController(playerCharacter, worldMap);
+>>>>>>> origin/Menus-and-Controllers
             worldMap.DisplayMap();
 
             do
             {
                 try {
-                    mc.DisplayMenu();
-                    mc.HandleResponse();
+
+                    moveController.DisplayMenu();
+                    moveController.HandleResponse();
                 }
                 catch (Exception e) {
                     Console.WriteLine(e.Message);

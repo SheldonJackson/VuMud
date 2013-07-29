@@ -60,6 +60,7 @@
     <Compile Include="Controllers\CharacterCreationController.cs" />
     <Compile Include="Controllers\IController.cs" />
     <Compile Include="Controllers\MoveController.cs" />
+    <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Creature\Ailments.cs">
       <SubType>Code</SubType>
     </Compile>
