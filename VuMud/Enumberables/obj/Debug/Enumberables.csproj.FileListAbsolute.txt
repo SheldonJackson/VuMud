@@ -1,5 +1,0 @@
-C:\Users\trey.george\Documents\GitHub\Enumberables\bin\Debug\Enumberables.dll
-C:\Users\trey.george\Documents\GitHub\Enumberables\bin\Debug\Enumberables.pdb
-C:\Users\trey.george\Documents\GitHub\Enumberables\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\trey.george\Documents\GitHub\Enumberables\obj\Debug\Enumberables.dll
-C:\Users\trey.george\Documents\GitHub\Enumberables\obj\Debug\Enumberables.pdb
