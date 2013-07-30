@@ -1,4 +1,0 @@
-﻿namespace Items {
-    class CreateItem {
-    }
-}
