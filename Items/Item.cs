@@ -5,7 +5,7 @@ namespace VuMud.Items {
         public long ItemId { get; set; }
         public string Description { get; set; }
         public string Name { get; set; }
-        public Stats AffectedStat { get; set; }
+        public StatsEnum AffectedStat { get; set; }
         public int Bonus { get; set; }
         public int Weight { get; set; }
         public int Price { get; set; }

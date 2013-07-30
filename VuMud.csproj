@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>VuMud.ItemGenerator.GenerateItems</StartupObject>
+    <StartupObject>VuMud.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -84,7 +84,6 @@
     </Compile>
     <Compile Include="Dbm\DbConfiguration.cs" />
     <Compile Include="Dbm\SqlExecute.cs" />
-    <Compile Include="ItemGenerator\GenerateItems.cs" />
     <Compile Include="Items\Armor.cs" />
     <Compile Include="Items\ArmorSlots.cs" />
     <Compile Include="Items\Consumable.cs" />
@@ -99,7 +98,7 @@
     <Compile Include="Items\NonEquipable.cs" />
     <Compile Include="Items\Potion.cs" />
     <Compile Include="Items\PotionEffects.cs" />
-    <Compile Include="Items\Stats.cs" />
+    <Compile Include="Items\StatsEnum.cs" />
     <Compile Include="Items\Types.cs" />
     <Compile Include="Items\Weapon.cs" />
     <Compile Include="Items\WeaponSlots.cs" />

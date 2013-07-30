@@ -1,5 +1,5 @@
 ﻿namespace VuMud.Items {
-    public enum Stats {
+    public enum StatsEnum {
         Strength,
         Dexterity,
         Constitution,

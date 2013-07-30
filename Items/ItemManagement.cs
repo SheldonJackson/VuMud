@@ -4,25 +4,23 @@ using VuMud.Items.DataAccess;
 
 namespace VuMud.Items {
     public class ItemManagement {
-        private ItemDao dao;
+        private readonly ItemDao _dao;
 
         public ItemManagement() {
-            dao = new ItemDao();
+            _dao = new ItemDao();
         }
 
         public void InsertWeapon(Weapon weapon) {
-            dao.InsertWeapon(weapon);
+            _dao.InsertWeapon(weapon);
         }
 
         public void ExportWeaponItemsToCsv(string path) {
-            var allWeapons = dao.SelectAllWeapons();
+            var allWeapons = _dao.SelectAllWeapons();
             using (var sr = new StreamWriter(path)) {
-                string line;
-                foreach (IDataRecord record in allWeapons) {
-                    line = string.Format("{0},{1},{2},{3},{4},{5},{6}\r\n", record["Name"], record["Description"],
+                foreach (var record in allWeapons) {
+                    var line = string.Format("{0},{1},{2},{3},{4},{5},{6}\r\n", record["Name"], record["Description"],
                         record["Weight"], record["Cost"], record["Bonus"], record["Stat"], record["Slot"]);
                     sr.WriteLine(line);
-
                 }
             }
         }

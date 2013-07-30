@@ -7,7 +7,7 @@ namespace VuMud.Items {
         public IConsumable Consumable;
         public IEquipable Equipable;
 
-        public Potion(int bonus, Stats stat, string desc, string name)
+        public Potion(int bonus, StatsEnum stat, string desc, string name)
         {
             Bonus = bonus;
             AffectedStat = stat;

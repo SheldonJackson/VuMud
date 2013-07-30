@@ -9,7 +9,7 @@ namespace VuMud.Items {
         public IConsumable Consumable;
         public IEquipable Equipable;
 
-        public Weapon(int bonus, Stats stat, string desc, string name, int weight)
+        public Weapon(int bonus, StatsEnum stat, string desc, string name, int weight)
         {
             Bonus = bonus;
             AffectedStat = stat;

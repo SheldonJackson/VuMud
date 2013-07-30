@@ -59,7 +59,7 @@ namespace VuMud.Items.DataAccess {
             return _dbm.Select("RetrieveAllWeapons", new SqlParameter[0]);
         } 
 
-        private long SelectAffectedStatId(Stats stat)
+        private long SelectAffectedStatId(StatsEnum stat)
         {
             var parameters = new SqlParameter[]
             {
