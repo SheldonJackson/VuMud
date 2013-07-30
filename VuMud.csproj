@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Classes\Classes.cs" />
     <Compile Include="Controllers\CharacterCreationController.cs" />
+    <Compile Include="Controllers\CommandMapper.cs" />
     <Compile Include="Controllers\IController.cs" />
     <Compile Include="Controllers\MoveController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
