@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -10,18 +9,15 @@ using System.Threading.Tasks;
 using VuMud.Dbm;
 
 namespace VuMud.Items.DataAccess {
-    public class ItemDao
-    {
+    public class ItemDao {
         private SqlExecute dbm;
 
-        public ItemDao()
-        {
+        public ItemDao() {
             SqlExecute dbm = new SqlExecute();
-            dbm.SetConfiguration("localhost","VuMud","vu_mud","tester");
+            dbm.SetConfiguration("localhost", "VuMud", "vu_mud", "tester");
         }
 
-        public void InsertWeapon(Weapon weapon)
-        {
+        public void InsertWeapon(Weapon weapon) {
             var parameters = new SqlParameter[]
             {
                 new SqlParameter("name", weapon.Name),
@@ -37,8 +33,7 @@ namespace VuMud.Items.DataAccess {
             dbm.Insert(procedure, parameters);
         }
 
-        public void DeleteWeapon(Weapon weapon)
-        {
+        public void DeleteWeapon(Weapon weapon) {
             var parameters = new SqlParameter[]
             {
                 new SqlParameter("itemId", weapon.ItemId)
@@ -48,8 +43,7 @@ namespace VuMud.Items.DataAccess {
             dbm.Delete(procedure, parameters);
         }
 
-        public List<IDataRecord> SelectWeaponById(Weapon weapon)
-        {
+        public List<IDataRecord> SelectWeaponById(Weapon weapon) {
             var parameters = new SqlParameter[]
             {
                 new SqlParameter("Id", weapon.WeaponId)
@@ -59,13 +53,11 @@ namespace VuMud.Items.DataAccess {
             return dbm.Select(procedure, parameters);
         }
 
-        public List<IDataRecord> SelectAllWeapons()
-        {
+        public List<IDataRecord> SelectAllWeapons() {
             return dbm.Select("RetrieveAllWeapons", new SqlParameter[0]);
-        } 
+        }
 
-        private long SelectAffectedStatId(Stats stat)
-        {
+        private long SelectAffectedStatId(Stats stat) {
             var parameters = new SqlParameter[]
             {
                 new SqlParameter("Stat", stat.ToString())
@@ -76,8 +68,7 @@ namespace VuMud.Items.DataAccess {
             return Convert.ToInt64(result[0]);
         }
 
-        private long SelectSlotId(WeaponSlots slot)
-        {
+        private long SelectSlotId(WeaponSlots slot) {
             var parameters = new SqlParameter[]
             {
                 new SqlParameter("Slot", slot)
@@ -86,40 +77,6 @@ namespace VuMud.Items.DataAccess {
             var result = dbm.Select(procedure, parameters);
 
             return Convert.ToInt64(result[0]);
-=======
-﻿using System.Collections.Generic;
-using System.Data.SqlClient;
-
-namespace VuMud.Items.DataAccess {
-<<<<<<< HEAD
-    public class ItemDao {
-        public SqlConnection Connection;
-
-        public ItemDao() {
-            Connection = new SqlConnection("Server=localhost;Database=VuMud;User Id=vehical_admin;Password=tester;");
-        }
-
-        public SqlDataReader RetrieveItem(int itemId) {
-            using (Connection) {
-
-=======
-    public class ItemDao
-    {
-        public SqlConnection Connection;
-
-        public ItemDao()
-        {
-            Connection = new SqlConnection("Server=localhost;Database=VuMud;User Id=vehical_admin;Password=tester;");
-        }
-
-        public SqlDataReader RetrieveItem(int itemId)
-        {
-            using (Connection)
-            {
-                
->>>>>>> origin/master
-            }
->>>>>>> Rebase
         }
     }
 }
