@@ -46,6 +46,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>VuMud.ItemGenerator.GenerateItems</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,6 +65,45 @@
     <Compile Include="Controllers\MoveController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="FileIO.cs" />
+    <Compile Include="Creature\Ailments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Creature\Creature.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Creature\Equipment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Creature\EquipmentSlots.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Creature\PlayerCharacter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Creature\Stats.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dbm\DbConfiguration.cs" />
+    <Compile Include="Dbm\SqlExecute.cs" />
+    <Compile Include="ItemGenerator\GenerateItems.cs" />
+    <Compile Include="Items\Armor.cs" />
+    <Compile Include="Items\ArmorSlots.cs" />
+    <Compile Include="Items\Consumable.cs" />
+    <Compile Include="Items\CreateItem.cs" />
+    <Compile Include="Items\DataAccess\ItemDao.cs" />
+    <Compile Include="Items\Equipable.cs" />
+    <Compile Include="Items\IConsumable.cs" />
+    <Compile Include="Items\IEquipable.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\NonConsumable.cs" />
+    <Compile Include="Items\NonEquipable.cs" />
+    <Compile Include="Items\Potion.cs" />
+    <Compile Include="Items\PotionEffects.cs" />
+    <Compile Include="Items\Stats.cs" />
+    <Compile Include="Items\Types.cs" />
+    <Compile Include="Items\Weapon.cs" />
+    <Compile Include="Items\WeaponSlots.cs" />
+    <Compile Include="Items\WorldItems.cs" />
     <Compile Include="Menus\CharacterMenu.cs" />
     <Compile Include="Menus\IMenu.cs" />
     <Compile Include="Menus\Menu.cs" />
@@ -73,6 +115,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="bin\Debug\VuMud.exe.config" />
+    <None Include="bin\Debug\VuMud.vshost.exe.config" />
+    <None Include="bin\Debug\VuMud.vshost.exe.manifest" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -108,6 +153,13 @@
       <Project>{bbfcfc5d-d441-469a-a4b6-171e9bac05a4}</Project>
       <Name>World</Name>
     </ProjectReference>
+    <Content Include="bin\Debug\VuMud.exe" />
+    <Content Include="bin\Debug\VuMud.pdb" />
+    <Content Include="bin\Debug\VuMud.vshost.exe" />
+    <Content Include="Dbm\DbmImplementationExamples.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

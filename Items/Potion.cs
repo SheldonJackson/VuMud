@@ -1,6 +1,7 @@
 ﻿namespace Items {
     public class Potion : Item
     {
+        public long PotionId { get; set; }
         public IConsumable Consumable;
         public IEquipable Equipable;
 

@@ -10,7 +10,6 @@
         Legs,
         Feet,
         RightFinger,
-        LeftFinger,
-        Penis
+        LeftFinger
     }
 }

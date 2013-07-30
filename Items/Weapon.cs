@@ -1,6 +1,7 @@
 ﻿namespace Items {
     public class Weapon : Item
     {
+        public long WeaponId { get; set; }
         public WeaponSlots Slot { get; set; }
 
         public IConsumable Consumable;
