@@ -11,7 +11,7 @@ using VuMud.World;
 
 namespace VuMud {
     class Program {
-        static void Main(string[] args) {
+        static void Main() {
             var pc = new PlayerCharacter();
 
             var characterCreationController = new CharacterCreationController();
