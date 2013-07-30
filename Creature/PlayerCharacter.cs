@@ -1,4 +1,4 @@
-﻿using VuMud.Items;
+﻿using Items;
 
 namespace VuMud.Creature {
     public class PlayerCharacter : Creature {

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using VuMud.Items;
+using Items;
 
 namespace VuMud.World {
     public class Room {

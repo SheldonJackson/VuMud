@@ -85,23 +85,6 @@
     <Compile Include="Dbm\DbConfiguration.cs" />
     <Compile Include="Dbm\SqlExecute.cs" />
     <Compile Include="ItemGenerator\GenerateItems.cs" />
-    <Compile Include="Items\Armor.cs" />
-    <Compile Include="Items\ArmorSlots.cs" />
-    <Compile Include="Items\Consumable.cs" />
-    <Compile Include="Items\CreateItem.cs" />
-    <Compile Include="Items\Equipable.cs" />
-    <Compile Include="Items\IConsumable.cs" />
-    <Compile Include="Items\IEquipable.cs" />
-    <Compile Include="Items\Item.cs" />
-    <Compile Include="Items\NonConsumable.cs" />
-    <Compile Include="Items\NonEquipable.cs" />
-    <Compile Include="Items\Potion.cs" />
-    <Compile Include="Items\PotionEffects.cs" />
-    <Compile Include="Items\Stats.cs" />
-    <Compile Include="Items\Types.cs" />
-    <Compile Include="Items\Weapon.cs" />
-    <Compile Include="Items\WeaponSlots.cs" />
-    <Compile Include="Items\WorldItems.cs" />
     <Compile Include="Menus\CharacterMenu.cs" />
     <Compile Include="Menus\IMenu.cs" />
     <Compile Include="Menus\Menu.cs" />
@@ -145,6 +128,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Items\Items.csproj">
+      <Project>{6721c952-a79c-4109-b5e7-8c78ff10bd1d}</Project>
+      <Name>Items</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

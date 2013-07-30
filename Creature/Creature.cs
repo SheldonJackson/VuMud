@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using VuMud.Items;
 using VuMud.World;
+using Items;
 
 namespace VuMud.Creature {
     public class Creature : IDisposable {
