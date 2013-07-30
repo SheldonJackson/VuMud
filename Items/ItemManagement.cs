@@ -43,6 +43,11 @@ namespace VuMud.Items {
                     skipCount++;
                 } while (line != null && skipCount < 0);
             }
+
+            foreach (var weapon in weapons) {
+                var dataList = weapon.Split(',');
+                
+            }
         }
     }
 }
