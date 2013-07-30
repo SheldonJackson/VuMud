@@ -1,0 +1,9 @@
+C:\Users\trey.george\Documents\GitHub\Stats\bin\Debug\Stats.dll
+C:\Users\trey.george\Documents\GitHub\Stats\bin\Debug\Stats.pdb
+C:\Users\trey.george\Documents\GitHub\Stats\obj\Debug\Stats.dll
+C:\Users\trey.george\Documents\GitHub\Stats\obj\Debug\Stats.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\Stats\bin\Debug\Stats.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\Stats\bin\Debug\Stats.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\Stats\obj\Debug\Stats.csprojResolveAssemblyReference.cache
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\Stats\obj\Debug\Stats.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\Stats\obj\Debug\Stats.pdb

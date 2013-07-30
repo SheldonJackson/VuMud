@@ -1,0 +1,9 @@
+C:\Users\trey.george\Documents\GitHub\Classes\bin\Debug\Classes.dll
+C:\Users\trey.george\Documents\GitHub\Classes\bin\Debug\Classes.pdb
+C:\Users\trey.george\Documents\GitHub\Classes\obj\Debug\Classes.dll
+C:\Users\trey.george\Documents\GitHub\Classes\obj\Debug\Classes.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\Classes\bin\Debug\Classes.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\Classes\bin\Debug\Classes.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\Classes\obj\Debug\Classes.csprojResolveAssemblyReference.cache
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\Classes\obj\Debug\Classes.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\Classes\obj\Debug\Classes.pdb
