@@ -1,4 +1,4 @@
-﻿using VuMud.Creature;
+﻿using Creatures;
 using VuMud.Menus;
 
 namespace VuMud.Controllers {

@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VuMud.Creature;
-using VuMud.World;
+using Creatures;
+using World;
 
 namespace VuMud.Menus {
     public class RoomMenu : IMenu

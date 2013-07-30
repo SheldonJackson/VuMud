@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using VuMud.Controllers;
-using VuMud.Creature;
-using VuMud.World;
+using Creatures;
+using World;
 
 namespace VuMud {
     class Program {
@@ -64,7 +64,7 @@ namespace VuMud {
         {
             var menu =
                 string.Format(
-                    "What would you like to do?{0} (C)reate a new creature.{0} (S)elect a creature's info.{0} (U)pdate a creature's info.{0} (D)elete a creature.",
+                    "What would you like to do?{0} (C)reate a new creature.{0} (S)elect a creature's info.{0} (U)pdate a creature's info.{0} (D)elete a creature.{0} (I)mport creature from file.{0} (E)xport all creatures{0}",
                     Environment.NewLine);
             var quit = false;
             while (!quit)
@@ -87,6 +87,12 @@ namespace VuMud {
                         break;
                     case "D":
                         DeleteCreature();
+
+                        break;
+                    case "I":
+                        break;
+                    case "E":
+                        //ExportCreature();
 
                         break;
                     default:

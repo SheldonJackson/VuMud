@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using VuMud.Creature;
+﻿using System.Linq;
+using Creatures;
 using VuMud.Menus;
-using VuMud.World;
+using World;
 
 namespace VuMud.Controllers {
     public class MoveController : IController {
-        public Creature.Creature PlayerCreature { get; set; }
+        public Creature PlayerCreature { get; set; }
         public MoveMenu MoveMenu { get; set; }
         public Map Map { get; set; }
 
-        public MoveController(Creature.Creature character, Map map)
+        public MoveController(Creature character, Map map)
         {
             PlayerCreature = character;
             MoveMenu = new MoveMenu();

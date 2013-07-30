@@ -1,14 +1,15 @@
 ﻿using System.Linq;
+using Creatures;
 using VuMud.Menus;
-using VuMud.World;
+using World;
 
 namespace VuMud.Controllers {
     class RoomController : IController {
-        public Creature.Creature PlayerCreature { get; set; }
+        public Creature PlayerCreature { get; set; }
         public RoomMenu RoomMenu { get; set; }
         public Map Map { get; set; }
 
-        public RoomController (Creature.Creature character, Map world)
+        public RoomController (Creature character, Map world)
         {
             RoomMenu = new RoomMenu();
             PlayerCreature = character;

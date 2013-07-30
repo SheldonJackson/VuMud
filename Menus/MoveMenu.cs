@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VuMud.World;
+using World;
 
 namespace VuMud.Menus {
     public class MoveMenu : IMenu {

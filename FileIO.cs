@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VuMud.Creature {
-    public class Equipment {
-
+namespace VuMud {
+    class FileIO
+    {
+        
     }
 }
