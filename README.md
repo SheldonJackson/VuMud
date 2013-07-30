@@ -1,4 +1,4 @@
 VuMud
 =====
 
-Jordan Kempf is a sexy beast.
+It is what it is what it is.
