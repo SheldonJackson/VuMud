@@ -148,6 +148,7 @@
     <ProjectReference Include="..\Items\Items.csproj">
       <Project>{86d98177-46bc-4c97-86f3-9383b9e78cc3}</Project>
       <Name>Items</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\World\World.csproj">
       <Project>{bbfcfc5d-d441-469a-a4b6-171e9bac05a4}</Project>
