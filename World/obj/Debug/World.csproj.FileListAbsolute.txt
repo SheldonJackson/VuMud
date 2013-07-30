@@ -2,3 +2,8 @@ C:\Users\trey.george\Documents\GitHub\World\bin\Debug\World.dll
 C:\Users\trey.george\Documents\GitHub\World\bin\Debug\World.pdb
 C:\Users\trey.george\Documents\GitHub\World\obj\Debug\World.dll
 C:\Users\trey.george\Documents\GitHub\World\obj\Debug\World.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\World\bin\Debug\World.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\World\bin\Debug\World.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\World\obj\Debug\World.csprojResolveAssemblyReference.cache
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\World\obj\Debug\World.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMud\World\obj\Debug\World.pdb
