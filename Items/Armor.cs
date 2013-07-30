@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VuMud.Creature;
-
-namespace VuMud.Items {
+﻿namespace Items {
     public class Armor : Item
     {
-        public long ArmorId { get; set; }
         public ArmorSlots Slot { get; set; }
 
         public IConsumable Consumable;
         public IEquipable Equipable;
 
-        public Armor(int bonus, Stats stat, string desc, string name, int weight)
+        public Armor(int bonus, Stats.Stats stat, string desc, string name, int weight)
         {
             Bonus = bonus;
             AffectedStat = stat;

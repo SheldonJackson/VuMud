@@ -1,7 +1,7 @@
-﻿using VuMud.Items;
+﻿using Items;
 
-namespace VuMud.Creature {
-    public class PlayerCharacter : Creature {
+namespace Creatures {
+    public class PlayerCharacter :  Creature {
 
         public string Inspect(Item item) {
             return item.Description;

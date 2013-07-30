@@ -1,15 +1,10 @@
-﻿using System.Collections.Generic;
-using VuMud.Items;
-
-namespace VuMud.World {
+﻿namespace World {
     public class Room {
         public int X { get; set; }
         public int Y { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string[] Exits { get; set; }
-
-        public List<Item> Inventory;
 
         public Room(int x, int y, string title, string description, string[] exits = null)
         {

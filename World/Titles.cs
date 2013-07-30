@@ -1,4 +1,4 @@
-﻿namespace VuMud.World {
+﻿namespace World {
     public enum RoomTitles
     {
         Woods,

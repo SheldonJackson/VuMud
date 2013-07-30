@@ -1,13 +1,10 @@
-﻿using VuMud.Creature;
-
-namespace VuMud.Items {
+﻿namespace Items {
     public class Potion : Item
     {
-        public long PotionId { get; set; }
         public IConsumable Consumable;
         public IEquipable Equipable;
 
-        public Potion(int bonus, Stats stat, string desc, string name)
+        public Potion(int bonus, Stats.Stats stat, string desc, string name)
         {
             Bonus = bonus;
             AffectedStat = stat;

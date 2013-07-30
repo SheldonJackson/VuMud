@@ -1,22 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using VuMud.Items;
-using VuMud.World;
+using Items;
+using World;
 
-namespace VuMud.Creature {
-    public class Creature : IDisposable {
+namespace Creatures {
+    public class Creature : IDisposable{
         public string Name { get; set; }
         public Stats Stats { get; set; }
         public string Description { get; set; }
         public Room Location { get; set; }
 
         Enum Class { get; set; }
-
-        private List<Item> Inventory;
-
-        public Creature() {
-            Inventory = new List<Item>();
-        }
+        List<Item> Invtentory { get; set; }
 
         public void Communicate(Creature creature) {
             //TODO: Stuff goes here
@@ -30,32 +25,18 @@ namespace VuMud.Creature {
             //TODO: stuff goes here
         }
 
-        public void AddItem(Item item) {
-            Inventory.Add(item);
-        }
-
         public void DropItem(Item item) {
-            Location.Inventory.Add(item);
-            this.Inventory.Remove(item);
-        }
-
-        public bool IsAlive() {
-            if (Stats.Health > 0) {
-                return true;
-            }
-            else {
-                return false;
-            }
+            //TODO: stuff goes here
         }
 
         public void Die() {
-            foreach (Item item in Inventory) {
+            foreach (var item in Invtentory) {
                 DropItem(item);
             }
         }
 
         public void Dispose() {
-            //TODO: self destruct
+            throw new NotImplementedException();
         }
     }
 }

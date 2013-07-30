@@ -1,4 +1,4 @@
-﻿namespace VuMud.Items {
+﻿namespace Items {
     enum Types {
         Potion,
         Weapon,

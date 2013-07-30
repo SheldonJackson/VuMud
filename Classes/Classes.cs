@@ -1,4 +1,4 @@
-﻿namespace VuMud.Classes {
+﻿namespace Classes {
     enum Classes {
         Assassin,
         Sniper,

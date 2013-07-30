@@ -1,15 +1,12 @@
-﻿using VuMud.Creature;
-
-namespace VuMud.Items {
+﻿namespace Items {
     public class Weapon : Item
     {
-        public long WeaponId { get; set; }
         public WeaponSlots Slot { get; set; }
 
         public IConsumable Consumable;
         public IEquipable Equipable;
 
-        public Weapon(int bonus, Stats stat, string desc, string name, int weight)
+        public Weapon(int bonus, Stats.Stats stat, string desc, string name, int weight)
         {
             Bonus = bonus;
             AffectedStat = stat;

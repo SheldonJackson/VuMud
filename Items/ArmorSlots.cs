@@ -1,4 +1,4 @@
-﻿namespace VuMud.Items {
+﻿namespace Items {
     public enum ArmorSlots {
         Head,
         Neck,

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VuMud.Items {
+namespace Items {
     public interface IConsumable
     {
         bool CanConsume();

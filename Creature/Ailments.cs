@@ -1,4 +1,4 @@
-﻿namespace VuMud.Creature {
+﻿namespace Creatures {
     enum Ailments {
         Poisoned,
         Starving,

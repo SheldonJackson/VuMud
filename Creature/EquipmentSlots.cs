@@ -1,4 +1,4 @@
-﻿namespace VuMud.Creature {
+﻿namespace Creatures {
     enum EquipmentSlots {
         Head,
         Neck,
@@ -10,6 +10,7 @@
         Legs,
         Feet,
         RightFinger,
-        LeftFinger
+        LeftFinger,
+        Penis
     }
 }
