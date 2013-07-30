@@ -12,7 +12,7 @@ namespace VuMud.Items.DataAccess {
         public ItemDao()
         {
             _dbm = new SqlExecute();
-            _dbm.SetConfiguration("localhost","VuMud","vu_mud","tester");
+            _dbm.SetConfiguration("VUHL-50TVWW1","vumud_app","vu_mud","tester");
         }
 
         public void InsertWeapon(Weapon weapon)

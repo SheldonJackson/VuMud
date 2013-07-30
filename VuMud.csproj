@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>VuMud.Program</StartupObject>
+    <StartupObject>VuMud.FileIO_Lab</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -84,6 +84,7 @@
     </Compile>
     <Compile Include="Dbm\DbConfiguration.cs" />
     <Compile Include="Dbm\SqlExecute.cs" />
+    <Compile Include="FileIO_Lab.cs" />
     <Compile Include="Items\Armor.cs" />
     <Compile Include="Items\ArmorSlots.cs" />
     <Compile Include="Items\Consumable.cs" />
