@@ -25,18 +25,6 @@ namespace VuMud {
             playerCharacter.Location = worldMap.WorldMapRooms[0, 0];
             MoveController moveController = new MoveController(playerCharacter, worldMap);
             worldMap.DisplayMap();
-
-            do
-            {
-                try {
-
-                    moveController.DisplayMenu();
-                    moveController.HandleResponse();
-                }
-                catch (Exception e) {
-                    Console.WriteLine(e.Message);
-                }
-            } while (true);
         }
     }
 }

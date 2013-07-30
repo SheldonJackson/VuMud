@@ -1,10 +1,6 @@
-﻿using System;
-using System.Security.Cryptography.X509Certificates;
-
-namespace VuMud.Controllers {
+﻿namespace VuMud.Controllers {
     public interface IController
     {
-        void DisplayMenu();
-        void HandleResponse();
+        void HandleResponse(string action, string target);
     }
 }

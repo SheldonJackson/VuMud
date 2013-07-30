@@ -1,43 +1,37 @@
-﻿using System.Linq;
-using VuMud.Menus;
+﻿using System.Collections.Generic;
 using VuMud.World;
+using VuMud.Creature;
 
-namespace VuMud.Controllers {
-    class RoomController : IController {
-        public Creature.Creature PlayerCreature { get; set; }
-        public RoomMenu RoomMenu { get; set; }
-        public Map Map { get; set; }
+namespace VuMud.Controllers
+{
+    internal class RoomController : IController
+    {
+        private Creature.Creature playerCreature { get; set; }
+        private Map map { get; set; }
 
-        public RoomController (Creature.Creature character, Map world)
+        private MoveController moveController;
+        private ViewController viewController;
+
+        private Dictionary<string, IController> commandDictionary = new Dictionary<string, IController>() ;
+
+        public RoomController(Creature.Creature player, Map worldMap)
         {
-            RoomMenu = new RoomMenu();
-            PlayerCreature = character;
-            Map = Map;
+            playerCreature = player;
+            map = worldMap;
+
+            moveController = new MoveController(playerCreature, map);
+            viewController = new ViewController(playerCreature, map);
+
+            commandDictionary.Add("view", viewController);
+            commandDictionary.Add("move", moveController);
         }
 
-        public void DisplayMenu()
+        public void HandleResponse(string action, string target)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public void HandleResponse()
-        {
-            Room room = PlayerCreature.Location;
-
-            var response = RoomMenu.GetRepsonse();
-            switch (response.ToUpper())
+            IController controller;
+            if(commandDictionary.TryGetValue(action, out controller))
             {
-                case "L":
-                    RoomMenu.Display(room);
-
-                    break;
-                case "E":
-                    var menuItems = (from exit in room.Exits where exit != null select new MenuItem(exit, exit.Substring(0, 1))).ToList();
-                    RoomMenu.Display(menuItems);
-
-                    break;
-                default:
-                    break;
+                controller.HandleResponse(action, target);
             }
         }
     }
