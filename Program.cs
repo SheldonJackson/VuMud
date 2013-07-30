@@ -92,7 +92,7 @@ namespace VuMud {
                     case "I":
                         break;
                     case "E":
-                        //ExportCreature();
+                        ExportCreature();
 
                         break;
                     default:
@@ -159,8 +159,9 @@ namespace VuMud {
             }
         }
 
-        static void SelectCreature()
+        static Creature SelectCreature()
         {
+            Creature creature = new Creature();
             Console.Write("Provide a creature id to select: ");
             var creatureId = Convert.ToInt64(Console.ReadLine());
             using (
@@ -173,13 +174,17 @@ namespace VuMud {
                     command.Parameters.Add(new SqlParameter("creatureId", creatureId));
                     command.CommandType = CommandType.StoredProcedure;
                     var reader = command.ExecuteReader();
-                    while (reader.Read()) {
-                        Console.WriteLine(reader["Name"]);
+                    while (reader.Read())
+                    {
+                        creature.Name = reader["Name"].ToString();
+                        creature.Description = reader["Description"].ToString();
+
                     }
                     reader.Close();
 
                 }
             }
+            return creature;
         }
 
         static void UpdateCreature()
@@ -265,5 +270,21 @@ namespace VuMud {
                 }
             }
         }
+
+        static void ExportCreature()
+        {
+            Console.Write("Provide a creature id to select: ");
+            var creatureId = Convert.ToInt64(Console.ReadLine());
+            using (
+                var connection =
+                    new SqlConnection("Server=VUHL-985LFV1;Database=VuMUD;User Id=vumud_user;Password=admin;")) {
+                var commandText = "SelectCharacterInfo";
+                using (var command = new SqlCommand(commandText, connection)) {
+                  
+
+                }
+            }
+        }
+
     }
 }

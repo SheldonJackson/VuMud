@@ -61,6 +61,7 @@
     <Compile Include="Controllers\IController.cs" />
     <Compile Include="Controllers\MoveController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
+    <Compile Include="FileIO.cs" />
     <Compile Include="Menus\CharacterMenu.cs" />
     <Compile Include="Menus\IMenu.cs" />
     <Compile Include="Menus\Menu.cs" />
