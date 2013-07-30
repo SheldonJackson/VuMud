@@ -1,0 +1,16 @@
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\VuMud.exe.config
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\VuMud.exe
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\VuMud.pdb
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\Classes.dll
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\Creature.dll
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\Items.dll
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\World.dll
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\Stats.dll
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\Classes.pdb
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\Creature.pdb
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\Items.pdb
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\World.pdb
+C:\Users\trey.george\Documents\GitHub\VuMud\bin\Debug\Stats.pdb
+C:\Users\trey.george\Documents\GitHub\VuMud\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\trey.george\Documents\GitHub\VuMud\obj\Debug\VuMud.exe
+C:\Users\trey.george\Documents\GitHub\VuMud\obj\Debug\VuMud.pdb
