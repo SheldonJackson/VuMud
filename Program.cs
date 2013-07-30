@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Xml.Linq;
 using VuMud.Controllers;
 using VuMud.Creature;
-using VuMud.Dbm;
 using VuMud.World;
 
 namespace VuMud {
     class Program {
         static void Main(string[] args)
         {
-            var pc = new PlayerCharacter();
             var characterCreationController = new CharacterCreationController();
-            pc = characterCreationController.CreateCharacter();
+            var pc = characterCreationController.CreateCharacter();
             // TODO - This will need to be rewritten or taken out, right now it's just here to prove that character creation works
             Console.WriteLine("Here is your character's info!");
             Console.WriteLine(pc.Name);

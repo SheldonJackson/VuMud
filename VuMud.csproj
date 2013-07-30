@@ -94,6 +94,7 @@
     <Compile Include="Items\IConsumable.cs" />
     <Compile Include="Items\IEquipable.cs" />
     <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\ItemManagement.cs" />
     <Compile Include="Items\NonConsumable.cs" />
     <Compile Include="Items\NonEquipable.cs" />
     <Compile Include="Items\Potion.cs" />
