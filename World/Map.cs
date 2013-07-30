@@ -4,13 +4,19 @@ using System.Configuration;
 using System.Linq;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace World {
     public class Map {
 =======
+=======
+>>>>>>> 62c808623e4ac13c51b8dcdce61d6b700de0024b
 namespace VuMud.World
 {
     public class Map
     {
+<<<<<<< HEAD
+>>>>>>> 62c808623e4ac13c51b8dcdce61d6b700de0024b
+=======
 >>>>>>> 62c808623e4ac13c51b8dcdce61d6b700de0024b
         public Room[,] WorldMapRooms = new Room[20, 10];
         public string mapString { get; set; }

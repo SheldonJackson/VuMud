@@ -4,8 +4,13 @@ using Items;
 using World;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace Creatures {
     public class Creature : IDisposable{
+=======
+namespace VuMud.Creature {
+    public class Creature : IDisposable {
+>>>>>>> 62c808623e4ac13c51b8dcdce61d6b700de0024b
 =======
 namespace VuMud.Creature {
     public class Creature : IDisposable {
