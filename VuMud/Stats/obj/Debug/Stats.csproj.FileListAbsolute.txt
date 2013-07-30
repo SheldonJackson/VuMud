@@ -1,0 +1,8 @@
+C:\Users\trey.george\Documents\GitHub\Stats\bin\Debug\Stats.dll
+C:\Users\trey.george\Documents\GitHub\Stats\bin\Debug\Stats.pdb
+C:\Users\trey.george\Documents\GitHub\Stats\obj\Debug\Stats.dll
+C:\Users\trey.george\Documents\GitHub\Stats\obj\Debug\Stats.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Stats\bin\Debug\Stats.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Stats\bin\Debug\Stats.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Stats\obj\Debug\Stats.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Stats\obj\Debug\Stats.pdb

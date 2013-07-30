@@ -1,0 +1,22 @@
+C:\Users\trey.george\Documents\GitHub\Creature\bin\Debug\Creature.dll
+C:\Users\trey.george\Documents\GitHub\Creature\bin\Debug\Creature.pdb
+C:\Users\trey.george\Documents\GitHub\Creature\bin\Debug\Items.dll
+C:\Users\trey.george\Documents\GitHub\Creature\bin\Debug\Stats.dll
+C:\Users\trey.george\Documents\GitHub\Creature\bin\Debug\World.dll
+C:\Users\trey.george\Documents\GitHub\Creature\bin\Debug\Items.pdb
+C:\Users\trey.george\Documents\GitHub\Creature\bin\Debug\Stats.pdb
+C:\Users\trey.george\Documents\GitHub\Creature\bin\Debug\World.pdb
+C:\Users\trey.george\Documents\GitHub\Creature\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\trey.george\Documents\GitHub\Creature\obj\Debug\Creature.dll
+C:\Users\trey.george\Documents\GitHub\Creature\obj\Debug\Creature.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Creature\bin\Debug\Creature.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Creature\bin\Debug\Creature.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Creature\bin\Debug\Items.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Creature\bin\Debug\Stats.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Creature\bin\Debug\World.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Creature\bin\Debug\Items.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Creature\bin\Debug\Stats.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Creature\bin\Debug\World.pdb
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Creature\obj\Debug\Creatures.csprojResolveAssemblyReference.cache
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Creature\obj\Debug\Creature.dll
+C:\Users\sheldon.jackson\Documents\Visual Studio 2012\Projects\VuMudTester\GitHub\Creature\obj\Debug\Creature.pdb
