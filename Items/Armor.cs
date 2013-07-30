@@ -8,6 +8,7 @@ using VuMud.Creature;
 namespace VuMud.Items {
     public class Armor : Item
     {
+        public long ArmorId { get; set; }
         public ArmorSlots Slot { get; set; }
 
         public IConsumable Consumable;

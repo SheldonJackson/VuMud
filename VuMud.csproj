@@ -89,6 +89,7 @@
     <Compile Include="Items\ArmorSlots.cs" />
     <Compile Include="Items\Consumable.cs" />
     <Compile Include="Items\CreateItem.cs" />
+    <Compile Include="Items\DataAccess\ItemDao.cs" />
     <Compile Include="Items\Equipable.cs" />
     <Compile Include="Items\IConsumable.cs" />
     <Compile Include="Items\IEquipable.cs" />

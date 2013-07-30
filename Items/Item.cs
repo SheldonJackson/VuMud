@@ -2,6 +2,7 @@
 
 namespace VuMud.Items {
     public abstract class Item : IEquipable, IConsumable {
+        public long ItemId { get; set; }
         public string Description { get; set; }
         public string Name { get; set; }
         public Stats AffectedStat { get; set; }
