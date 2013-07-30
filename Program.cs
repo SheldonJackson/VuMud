@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Xml.Linq;
 using VuMud.Controllers;
 using VuMud.Creature;
-using VuMud.Dbm;
 using VuMud.World;
 
 namespace VuMud {

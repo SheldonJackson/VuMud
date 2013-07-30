@@ -133,7 +133,7 @@
     <ProjectReference Include="..\Items\Items.csproj">
       <Project>{6721c952-a79c-4109-b5e7-8c78ff10bd1d}</Project>
       <Name>Items</Name>
-      <Private>True</Private>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
