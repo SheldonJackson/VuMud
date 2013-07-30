@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
 using VuMud.Dbm;
 
 namespace VuMud.Items.DataAccess {
     public class ItemDao
     {
-        private SqlExecute dbm;
+        private readonly SqlExecute _dbm;
 
         public ItemDao()
         {
-            SqlExecute dbm = new SqlExecute();
-            dbm.SetConfiguration("localhost","VuMud","vu_mud","tester");
+            _dbm = new SqlExecute();
+            _dbm.SetConfiguration("localhost","VuMud","vu_mud","tester");
         }
 
         public void InsertWeapon(Weapon weapon)
@@ -32,8 +28,8 @@ namespace VuMud.Items.DataAccess {
                 new SqlParameter("slotId", SelectSlotId(weapon.Slot))
             };
 
-            string procedure = "InsertWeapon";
-            dbm.Insert(procedure, parameters);
+            const string procedure = "InsertWeapon";
+            _dbm.Insert(procedure, parameters);
         }
 
         public void DeleteWeapon(Weapon weapon)
@@ -43,8 +39,8 @@ namespace VuMud.Items.DataAccess {
                 new SqlParameter("itemId", weapon.ItemId)
             };
 
-            string procedure = "RemoveWeaponByItemId";
-            dbm.Delete(procedure, parameters);
+            const string procedure = "RemoveWeaponByItemId";
+            _dbm.Delete(procedure, parameters);
         }
 
         public List<IDataRecord> SelectWeaponById(Weapon weapon)
@@ -54,13 +50,13 @@ namespace VuMud.Items.DataAccess {
                 new SqlParameter("Id", weapon.WeaponId)
             };
 
-            string procedure = "RetrieveWeaponById";
-            return dbm.Select(procedure, parameters);
+            const string procedure = "RetrieveWeaponById";
+            return _dbm.Select(procedure, parameters);
         }
 
         public List<IDataRecord> SelectAllWeapons()
         {
-            return dbm.Select("RetrieveAllWeapons", new SqlParameter[0]);
+            return _dbm.Select("RetrieveAllWeapons", new SqlParameter[0]);
         } 
 
         private long SelectAffectedStatId(Stats stat)
@@ -69,8 +65,8 @@ namespace VuMud.Items.DataAccess {
             {
                 new SqlParameter("Stat", stat.ToString())
             };
-            String procedure = "SELECT Id FROM AffectedStats WHERE Stat = @Stat";
-            var result = dbm.Select(procedure, parameters);
+            const string procedure = "SELECT Id FROM AffectedStats WHERE Stat = @Stat";
+            var result = _dbm.Select(procedure, parameters);
 
             return Convert.ToInt64(result[0]);
         }
@@ -81,8 +77,8 @@ namespace VuMud.Items.DataAccess {
             {
                 new SqlParameter("Slot", slot)
             };
-            String procedure = "SELECT Id FROM Slots WHERE Slot = @Slot";
-            var result = dbm.Select(procedure, parameters);
+            const string procedure = "SELECT Id FROM Slots WHERE Slot = @Slot";
+            var result = _dbm.Select(procedure, parameters);
 
             return Convert.ToInt64(result[0]);
         }

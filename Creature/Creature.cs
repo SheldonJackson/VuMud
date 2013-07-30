@@ -12,10 +12,10 @@ namespace VuMud.Creature {
 
         Enum Class { get; set; }
 
-        private List<Item> Inventory;
+        private readonly List<Item> _inventory;
 
         public Creature() {
-            Inventory = new List<Item>();
+            _inventory = new List<Item>();
         }
 
         public void Communicate(Creature creature) {
@@ -31,12 +31,12 @@ namespace VuMud.Creature {
         }
 
         public void AddItem(Item item) {
-            Inventory.Add(item);
+            _inventory.Add(item);
         }
 
         public void DropItem(Item item) {
             Location.Inventory.Add(item);
-            this.Inventory.Remove(item);
+            this._inventory.Remove(item);
         }
 
         public bool IsAlive() {
@@ -49,7 +49,7 @@ namespace VuMud.Creature {
         }
 
         public void Die() {
-            foreach (Item item in Inventory) {
+            foreach (Item item in _inventory) {
                 DropItem(item);
             }
         }
