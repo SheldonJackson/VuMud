@@ -15,25 +15,26 @@ namespace VuMud.Dbm {
 
         public void SetConfiguration(string server, string database, string user, string password)
         {
-            DbConfiguration dbConfiguration = new DbConfiguration(server, database, user, password);
+            var dbConfiguration = new DbConfiguration(server, database, user, password);
             Configuration = dbConfiguration.GetDbConfigurationString();
         }
 
         public long Insert(string procedure, SqlParameter[] parameters) {
-            return ExecuteNonSelectQuery(procedure, parameters);
+            return ExecuteNonQuery(procedure, parameters);
         }
 
         public long Update(string procedure, SqlParameter[] parameters) {
-            return ExecuteNonSelectQuery(procedure, parameters);
+            return ExecuteNonQuery(procedure, parameters);
         }
 
         public long Delete(string procedure, SqlParameter[] parameters) {
-            return ExecuteNonSelectQuery(procedure, parameters);
+            return ExecuteNonQuery(procedure, parameters);
         }
 
         public List<IDataRecord> Select(string procedure, SqlParameter[] parameters)
         {
-            List<IDataRecord> resultSet = new List<IDataRecord>();
+
+            var resultSet = new List<IDataRecord>();
             using (
                 var connection = new SqlConnection(Configuration)
                 )
@@ -50,7 +51,8 @@ namespace VuMud.Dbm {
             return resultSet;
         }
 
-        private long ExecuteNonSelectQuery(string procedure, SqlParameter[] parameters) {
+
+        private long ExecuteNonQuery(string procedure, SqlParameter[] parameters) {
             long id;
             using (
                 var connection = new SqlConnection(Configuration)

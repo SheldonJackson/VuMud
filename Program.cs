@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Xml.Linq;
 using VuMud.Controllers;
 using VuMud.Creature;
-using VuMud.Dbm;
 using VuMud.World;
 
 namespace VuMud {
     class Program {
-        static void Main(string[] args)
-        {
-            PlayerCharacter pc = new PlayerCharacter();
+        static void Main(string[] args) {
+
+            var pc = new PlayerCharacter();
             var characterCreationController = new CharacterCreationController();
             pc = characterCreationController.CreateCharacter();
             // TODO - This will need to be rewritten or taken out, right now it's just here to prove that character creation works
@@ -25,11 +19,11 @@ namespace VuMud {
             Console.WriteLine("Get ready for an adventure!!");
             Console.WriteLine();
             Map worldMap = new Map();
-            MoveController mc = new MoveController(pc, worldMap);
+            var mc = new MoveController(pc, worldMap);
             pc.Location = worldMap.WorldMapRooms[0, 0];
-            PlayerCharacter playerCharacter = new PlayerCharacter();
+            var playerCharacter = new PlayerCharacter();
             playerCharacter.Location = worldMap.WorldMapRooms[0, 0];
-            MoveController moveController = new MoveController(playerCharacter, worldMap);
+            var moveController = new MoveController(playerCharacter, worldMap);
             worldMap.DisplayMap();
 
             do {
@@ -41,7 +35,6 @@ namespace VuMud {
                     Console.WriteLine(e.Message);
                 }
             } while (true);
-
         }
     }
 }
