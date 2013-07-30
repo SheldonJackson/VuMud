@@ -44,6 +44,12 @@
     <Compile Include="Room.cs" />
     <Compile Include="Titles.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Items\Items.csproj">
+      <Project>{86d98177-46bc-4c97-86f3-9383b9e78cc3}</Project>
+      <Name>Items</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
